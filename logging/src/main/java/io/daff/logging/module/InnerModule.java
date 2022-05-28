@@ -19,11 +19,6 @@ public enum InnerModule implements Module {
     TEST(10, "DAFF.TEST"),
 
     /**
-     * 加密
-     */
-    CRYPTO(11, "DAFF.CRYPTO"),
-
-    /**
      * 校验
      */
     VALID(12, "DAFF.VALID"),

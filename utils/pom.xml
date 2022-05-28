@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>daff-base</artifactId>
+        <groupId>io.daff</groupId>
+        <version>1.0.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>crypto</artifactId>
+
+    <properties>
+        <logging.version>1.0.0</logging.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.daff</groupId>
+            <artifactId>logging</artifactId>
+            <version>${logging.version}</version>
+        </dependency>
+        <!-- bcrypt -->
+        <dependency>
+            <groupId>org.mindrot</groupId>
+            <artifactId>jbcrypt</artifactId>
+            <version>0.4</version>
+        </dependency>
+    </dependencies>
+
+</project>
