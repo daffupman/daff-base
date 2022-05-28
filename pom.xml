@@ -12,6 +12,7 @@
         <module>logging</module>
         <module>utils</module>
         <module>valid</module>
+        <module>cache</module>
     </modules>
 
     <properties>
