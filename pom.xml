@@ -10,6 +10,10 @@
     <version>1.0.0</version>
     <modules>
         <module>logging</module>
+        <module>utils</module>
+        <module>valid</module>
+        <module>cache</module>
+        <module>web</module>
     </modules>
 
     <properties>

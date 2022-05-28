@@ -16,12 +16,7 @@ public enum InnerModule implements Module {
     /**
      * 测试
      */
-    TEST(10, "DAFF.TEST"),
-
-    /**
-     * 加密
-     */
-    CRYPTO(11, "DAFF.CRYPTO"),
+    TEST(11, "DAFF.TEST"),
 
     /**
      * 校验
@@ -31,12 +26,12 @@ public enum InnerModule implements Module {
     /**
      * 缓存
      */
-    CACHE(12,"CACHE"),
+    CACHE(13,"CACHE"),
 
     /**
      * web通用
      */
-    WEB(12,"WEB"),
+    WEB(14,"WEB"),
     ;
 
     final Integer no;
