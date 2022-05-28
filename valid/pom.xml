@@ -9,23 +9,22 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>utils</artifactId>
+    <artifactId>valid</artifactId>
 
     <properties>
-        <logging.version>1.0.0</logging.version>
+        <utils.version>1.0.0</utils.version>
     </properties>
 
     <dependencies>
         <dependency>
-            <groupId>io.daff</groupId>
-            <artifactId>logging</artifactId>
-            <version>${logging.version}</version>
+            <groupId>org.hibernate.validator</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>6.1.5.Final</version>
         </dependency>
-        <!-- bcrypt -->
         <dependency>
-            <groupId>org.mindrot</groupId>
-            <artifactId>jbcrypt</artifactId>
-            <version>0.4</version>
+            <groupId>io.daff</groupId>
+            <artifactId>utils</artifactId>
+            <version>${utils.version}</version>
         </dependency>
     </dependencies>
 

@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
  * @author daffupman
  * @since 2020/7/12
  */
-public class StringHelper extends StringUtils {
+public class StringUtil extends StringUtils {
 
     /**
      * 判断str是否是一个合法的数字
