@@ -26,12 +26,12 @@ public enum InnerModule implements Module {
     /**
      * 缓存
      */
-    CACHE(13,"CACHE"),
+    CACHE(13,"DAFF.CACHE"),
 
     /**
      * web通用
      */
-    WEB(14,"WEB"),
+    WEB(14,"DAFF.WEB"),
     ;
 
     final Integer no;

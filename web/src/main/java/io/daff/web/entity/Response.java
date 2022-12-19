@@ -60,15 +60,15 @@ public class Response<T> {
         this(ok, code, msg, null);
     }
 
-    public Response(Boolean ok, Hint hint) {
+    public <H extends Hint> Response(Boolean ok, H hint) {
         this(ok, hint.code(), hint.msg(), null);
     }
 
-    public Response(Boolean ok, Hint hint, String msg) {
+    public <H extends Hint> Response(Boolean ok, H hint, String msg) {
         this(ok, hint.code(), msg, null);
     }
 
-    public Response(Boolean ok, Hint hint, T data) {
+    public <H extends Hint> Response(Boolean ok, H hint, T data) {
         this(ok, hint.code(), hint.msg(), data);
     }
 
@@ -91,11 +91,11 @@ public class Response<T> {
         return new Response<>(Boolean.FALSE, Hint.SYSTEM_ERROR);
     }
 
-    public static Response<Void> error(Hint hint) {
+    public static <H extends Hint> Response<Void> error(H hint) {
         return new Response<>(Boolean.FALSE, hint);
     }
 
-    public static Response<Void> error(Hint hint, String message) {
+    public static <H extends Hint> Response<Void> error(H hint, String message) {
         return new Response<>(Boolean.FALSE, hint.code(), message != null && !message.trim().equals("") ? message : hint.msg());
     }
 
