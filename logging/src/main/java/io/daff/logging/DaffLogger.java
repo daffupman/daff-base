@@ -20,7 +20,7 @@ public class DaffLogger {
     private static final String LOG4j2_FORMAT = "{}: ";
     private static final String LOG4j2_FORMAT_STR = "[%s]: ";
     private static final Map<String, Logger> LOGGER_MAP = new ConcurrentHashMap<>();
-    private static Logger logger;
+    private final Logger logger;
 
     private DaffLogger(String name) {
         logger = getLogger(name);
