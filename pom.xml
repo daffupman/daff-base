@@ -7,7 +7,7 @@
     <groupId>io.daff</groupId>
     <artifactId>daff-base</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.0</version>
+    <version>1.0</version>
     <modules>
         <module>logging</module>
         <module>utils</module>
