@@ -1,5 +1,8 @@
 package io.daff.cache;
 
+import org.springframework.util.CollectionUtils;
+
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -10,10 +13,10 @@ import java.util.concurrent.TimeUnit;
  */
 public class PreCacheDataExecutor {
 
-    private final BizDataLoader bizDataLoader;
+    private final List<BizDataLoader> bizDataLoaders;
 
-    public PreCacheDataExecutor(BizDataLoader bizDataLoader) {
-        this.bizDataLoader = bizDataLoader;
+    public PreCacheDataExecutor(List<BizDataLoader> bizDataLoaders) {
+        this.bizDataLoaders = bizDataLoaders;
     }
 
     /**
@@ -21,10 +24,12 @@ public class PreCacheDataExecutor {
      */
     public void exec() throws InterruptedException {
         // 数据加载
-        if (bizDataLoader != null) {
-            bizDataLoader.load();
-            while (!bizDataLoader.finish()) {
-                TimeUnit.SECONDS.sleep(1);
+        if (!CollectionUtils.isEmpty(bizDataLoaders)) {
+            for (BizDataLoader bizDataLoader : bizDataLoaders) {
+                bizDataLoader.load();
+                while (!bizDataLoader.finish()) {
+                    TimeUnit.SECONDS.sleep(1);
+                }
             }
         }
     }
