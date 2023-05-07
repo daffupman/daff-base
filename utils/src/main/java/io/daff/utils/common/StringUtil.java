@@ -2,7 +2,12 @@ package io.daff.utils.common;
 
 import org.springframework.util.StringUtils;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.Objects;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 /**
@@ -19,6 +24,18 @@ public class StringUtil extends StringUtils {
     public static boolean isInteger(String str) {
         try {
             Integer.valueOf(str);
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
+        }
+    }
+
+    /**
+     * 判断str是否是一个合法的数字
+     */
+    public static boolean isLong(String str) {
+        try {
+            Long.valueOf(str);
             return true;
         } catch (NumberFormatException e) {
             return false;

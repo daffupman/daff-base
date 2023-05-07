@@ -7,7 +7,7 @@
     <groupId>io.daff</groupId>
     <artifactId>daff-base</artifactId>
     <packaging>pom</packaging>
-    <version>1.0</version>
+    <version>${pversion}</version>
     <modules>
         <module>logging</module>
         <module>utils</module>
@@ -17,6 +17,7 @@
     </modules>
 
     <properties>
+        <pversion>1.1.0-SNAPSHOT</pversion>
         <spring.version>5.2.7.RELEASE</spring.version>
         <jdk.version>1.8</jdk.version>
     </properties>
