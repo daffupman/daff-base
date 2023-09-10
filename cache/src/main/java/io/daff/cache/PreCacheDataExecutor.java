@@ -13,9 +13,9 @@ import java.util.concurrent.TimeUnit;
  */
 public class PreCacheDataExecutor {
 
-    private final List<BizDataLoader> bizDataLoaders;
+    private final List<BizDataLoader<?,?>> bizDataLoaders;
 
-    public PreCacheDataExecutor(List<BizDataLoader> bizDataLoaders) {
+    public PreCacheDataExecutor(List<BizDataLoader<?,?>> bizDataLoaders) {
         this.bizDataLoaders = bizDataLoaders;
     }
 
@@ -25,7 +25,7 @@ public class PreCacheDataExecutor {
     public void exec() throws InterruptedException {
         // 数据加载
         if (!CollectionUtils.isEmpty(bizDataLoaders)) {
-            for (BizDataLoader bizDataLoader : bizDataLoaders) {
+            for (BizDataLoader<?,?> bizDataLoader : bizDataLoaders) {
                 bizDataLoader.load();
                 while (!bizDataLoader.finish()) {
                     TimeUnit.SECONDS.sleep(1);

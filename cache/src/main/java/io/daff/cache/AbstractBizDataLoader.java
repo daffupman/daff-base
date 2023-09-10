@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
  * @author daff
  * @since 2023/5/3
  */
-public abstract class AbstractBizDataLoader<K, V> implements BizDataLoader {
+public abstract class AbstractBizDataLoader<K, V> implements BizDataLoader<K, V> {
 
     protected static final DaffLogger logger = DaffLogger.getLogger(AbstractBizDataLoader.class);
     private Map<K, V> CACHED_MAP = new ConcurrentHashMap<>();
@@ -49,6 +49,7 @@ public abstract class AbstractBizDataLoader<K, V> implements BizDataLoader {
     /**
      * 根据K查询数据
      */
+    @Override
     public V get(K k) {
         if (k == null) {
             return null;

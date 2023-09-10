@@ -6,7 +6,7 @@ package io.daff.cache;
  * @author daff
  * @since 2021/11/15
  */
-public interface BizDataLoader {
+public interface BizDataLoader<K, V> {
 
     /**
      * 加载业务数据
@@ -17,4 +17,9 @@ public interface BizDataLoader {
      * 判断数据加载是否完成
      */
     boolean finish();
+
+    /**
+     * 根据K获取V
+     */
+    V get(K k);
 }
